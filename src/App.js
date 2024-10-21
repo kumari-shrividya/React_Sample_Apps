@@ -1,25 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
-
+import List from './List'
+import CategoryList from './CategoryList'
+import MultiLevelMenu from './MultiLevelMenu'
+import DropDown from './DropDownList'
+import { ThemeForm } from './ThemeForm';
+import {ThemeProvider} from './ThemeProvider'
+import Child from './ChildToParent.jsx';
+ import CounterRedux from './CounterRedux';
+///
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <div>
+        {/* <List/> */}
+        {/* <CategoryList/>
+        <MultiLevelMenu/> */}
+        {/* <DropDown/> */}
+        <ThemeProvider >
+        <ThemeForm/>
+        </ThemeProvider>
+        {/* <Child/> */}
+
+        <CounterRedux/>
+       
+      </div>
+
     </div>
   );
+  
 }
 
 export default App;
